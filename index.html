@@ -581,6 +581,9 @@
     }
     .album-top h3 { margin: 0; font-size: clamp(26px, 3.4vw, 48px); font-weight: 400; letter-spacing: -.05em; line-height: 1; }
     .album-top p { margin: 6px 0 0; color: var(--muted); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+    .album-ig { display: inline-block; margin-top: 8px; color: var(--white); font-size: 11px; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+    .album-ig:hover { border-color: var(--white); }
+    .album-ig[hidden] { display: none; }
     .pill-btn {
       flex: none;
       min-height: 40px;
@@ -871,7 +874,7 @@
 
   <div class="album-view" role="dialog" aria-modal="true" aria-labelledby="album-title">
     <div class="album-top">
-      <div><h3 id="album-title"></h3><p id="album-sub"></p></div>
+      <div><h3 id="album-title"></h3><p id="album-sub"></p><a class="album-ig" id="album-ig" target="_blank" rel="noopener"></a></div>
       <button class="pill-btn" type="button" data-close-album>Fechar ✕</button>
     </div>
     <div class="album-grid" id="album-grid"></div>
@@ -901,10 +904,10 @@
        ========================================================= */
     const ENSAIOS = window.ENSAIOS || [];
     const selecao = [
-      ['helena', 1], ['aurora', 1], ['leo', 1], ['marina', 1], ['talita', 2], ['thiago', 1],
-      ['nina', 1], ['bianca', 1], ['lia-e-rafael', 1], ['luiza', 1], ['davi', 1], ['sofia', 1],
-      ['helena', 4], ['aurora', 2], ['talita', 1], ['clara', 1], ['rafa', 1], ['marina', 6],
-      ['leo', 5], ['caio', 1], ['aurora', 7], ['thiago', 9], ['helena', 5], ['nina', 3],
+      ['leticia', 1], ['maria', 1], ['miguel', 1], ['danielle', 1], ['jayha', 2], ['saulo', 1],
+      ['flavia-b', 1], ['isabelly', 1], ['talita-e-welmo', 1], ['flavia-g', 1], ['marcus', 1], ['danielle', 36],
+      ['leticia', 4], ['maria', 2], ['jayha', 1], ['clara', 1], ['william', 1], ['danielle', 6],
+      ['miguel', 5], ['isaac', 1], ['maria', 7], ['saulo', 9], ['leticia', 5], ['flavia-b', 3],
     ];
     const fotoSrc = (e, f) => `assets/galeria/${e.pasta}/${f[0]}`;
     const porPasta = Object.fromEntries(ENSAIOS.map((e) => [e.pasta, e]));
@@ -1000,7 +1003,7 @@
       card.style.setProperty('--reveal-delay', (i % 3) * 90 + 'ms');
       card.innerHTML = `
         <div class="album-cover"><img src="${fotoSrc(e, e.fotos[0])}" alt="${e.nome}" loading="lazy" decoding="async"><span class="album-count">${e.fotos.length} fotos</span></div>
-        <div class="album-info"><strong>${e.nome}</strong><span>${e.tipo}</span></div>`;
+        <div class="album-info"><strong>${e.nome}</strong><span>${e.instagram ? '@' + e.instagram : e.tipo}</span></div>`;
       card.addEventListener('click', () => openAlbum(i));
       albumsEl.appendChild(card);
       if (window.__revealIO) window.__revealIO.observe(card); else card.classList.add('is-visible');
@@ -1014,6 +1017,9 @@
       const e = ENSAIOS[albumAtual];
       document.getElementById('album-title').textContent = e.nome;
       document.getElementById('album-sub').textContent = `${e.tipo} · ${e.fotos.length} fotos`;
+      const ig = document.getElementById('album-ig');
+      ig.hidden = !e.instagram;
+      if (e.instagram) { ig.href = `https://www.instagram.com/${e.instagram}/`; ig.textContent = `@${e.instagram} ↗`; }
       const lista = e.fotos.map((f) => ({ src: fotoSrc(e, f), titulo: e.nome }));
       avGrid.innerHTML = '';
       e.fotos.forEach((f, j) => {

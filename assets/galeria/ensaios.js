@@ -1,8 +1,8 @@
-/* Gerado automaticamente — edite nome/tipo à vontade. Cada ensaio = uma pasta em assets/galeria/<pasta>/ */
+/* Cada ensaio = uma pasta em assets/galeria/<pasta>/. Edite nome, tipo e instagram (só o @, sem link). */
 window.ENSAIOS = [
  {
-  "pasta": "helena",
-  "nome": "Helena",
+  "pasta": "leticia",
+  "nome": "Letícia",
   "tipo": "Ensaio urbano · Centro de SP",
   "fotos": [
    [
@@ -255,11 +255,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "letoliveiraoficial"
  },
  {
-  "pasta": "aurora",
-  "nome": "Aurora",
+  "pasta": "maria",
+  "nome": "Maria",
   "tipo": "Ensaio analógico · Centro",
   "fotos": [
    [
@@ -482,11 +483,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": ""
  },
  {
-  "pasta": "leo",
-  "nome": "Leo",
+  "pasta": "miguel",
+  "nome": "Miguel",
   "tipo": "Retrato masculino · Rua",
   "fotos": [
    [
@@ -654,12 +656,13 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "omigueu"
  },
  {
-  "pasta": "marina",
-  "nome": "Marina",
-  "tipo": "Retrato · Neon",
+  "pasta": "danielle",
+  "nome": "Danielle",
+  "tipo": "Retrato · Neon e P&B",
   "fotos": [
    [
     "01.jpg",
@@ -835,12 +838,48 @@ window.ENSAIOS = [
     "35.jpg",
     1440,
     1800
+   ],
+   [
+    "36.jpg",
+    1200,
+    1800
+   ],
+   [
+    "37.jpg",
+    1200,
+    1800
+   ],
+   [
+    "38.jpg",
+    1200,
+    1800
+   ],
+   [
+    "39.jpg",
+    1201,
+    1800
+   ],
+   [
+    "40.jpg",
+    1013,
+    1800
+   ],
+   [
+    "41.jpg",
+    1201,
+    1800
+   ],
+   [
+    "42.jpg",
+    1440,
+    1800
    ]
-  ]
+  ],
+  "instagram": "fs.dany"
  },
  {
-  "pasta": "talita",
-  "nome": "Talita",
+  "pasta": "jayha",
+  "nome": "Jayha",
   "tipo": "Moda · Metrô e rua",
   "fotos": [
    [
@@ -1008,11 +1047,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "jaylrj_"
  },
  {
-  "pasta": "thiago",
-  "nome": "Thiago",
+  "pasta": "saulo",
+  "nome": "Saulo",
   "tipo": "Retrato masculino · P&B",
   "fotos": [
    [
@@ -1170,11 +1210,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "hefesto.og"
  },
  {
-  "pasta": "nina",
-  "nome": "Nina",
+  "pasta": "flavia-b",
+  "nome": "Flávia",
   "tipo": "Retrato noturno",
   "fotos": [
    [
@@ -1302,11 +1343,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "flabertoni_"
  },
  {
-  "pasta": "bianca",
-  "nome": "Bianca",
+  "pasta": "isabelly",
+  "nome": "Isabelly",
   "tipo": "Moda de rua",
   "fotos": [
    [
@@ -1434,11 +1476,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "bellywera"
  },
  {
-  "pasta": "davi",
-  "nome": "Davi",
+  "pasta": "marcus",
+  "nome": "Marcus",
   "tipo": "Moda · Streetwear",
   "fotos": [
    [
@@ -1521,11 +1564,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "marcuschado"
  },
  {
-  "pasta": "luiza",
-  "nome": "Luiza",
+  "pasta": "flavia-g",
+  "nome": "Flávia",
   "tipo": "Retrato · Luz quente",
   "fotos": [
    [
@@ -1578,11 +1622,12 @@ window.ENSAIOS = [
     1440,
     1800
    ]
-  ]
+  ],
+  "instagram": "flagonzalezzz"
  },
  {
-  "pasta": "lia-e-rafael",
-  "nome": "Lia & Rafael",
+  "pasta": "talita-e-welmo",
+  "nome": "Talita & Welmo",
   "tipo": "Ensaio de casal",
   "fotos": [
    [
@@ -1660,7 +1705,8 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": ""
  },
  {
   "pasta": "clara",
@@ -1742,53 +1788,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": ""
  },
  {
-  "pasta": "sofia",
-  "nome": "Sofia",
-  "tipo": "Retrato · P&B",
-  "fotos": [
-   [
-    "01.jpg",
-    1200,
-    1800
-   ],
-   [
-    "02.jpg",
-    1200,
-    1800
-   ],
-   [
-    "03.jpg",
-    1200,
-    1800
-   ],
-   [
-    "04.jpg",
-    1201,
-    1800
-   ],
-   [
-    "05.jpg",
-    1013,
-    1800
-   ],
-   [
-    "06.jpg",
-    1201,
-    1800
-   ],
-   [
-    "07.jpg",
-    1440,
-    1800
-   ]
-  ]
- },
- {
-  "pasta": "rafa",
-  "nome": "Rafa",
+  "pasta": "william",
+  "nome": "William",
   "tipo": "Retrato noturno",
   "fotos": [
    [
@@ -1826,7 +1831,8 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": "sr.william_ramalho"
  },
  {
   "pasta": "gabi",
@@ -1863,11 +1869,12 @@ window.ENSAIOS = [
     1200,
     1800
    ]
-  ]
+  ],
+  "instagram": ""
  },
  {
-  "pasta": "caio",
-  "nome": "Caio",
+  "pasta": "isaac",
+  "nome": "Isaac",
   "tipo": "Retrato noturno",
   "fotos": [
    [
@@ -1895,6 +1902,7 @@ window.ENSAIOS = [
     1440,
     1800
    ]
-  ]
+  ],
+  "instagram": "isaacsieben"
  }
 ];
