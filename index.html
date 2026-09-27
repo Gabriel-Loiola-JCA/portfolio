@@ -1216,6 +1216,20 @@
        — "destaques": a 1ª é a capa; as outras aparecem na Mescla
        e no modo Aleatório.
        ========================================================= */
+
+    /* o site sempre abre no topo: o navegador não restaura a posição antiga
+       e endereços com âncora de seção (#ensaios, #contato…) são limpos.
+       Só #ensaio-<pasta> (abre o álbum) e #aleatorio continuam valendo. */
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const hashInicial = location.hash;
+    const linkDireto = /^#ensaio-/.test(hashInicial) || hashInicial === '#aleatorio';
+    if (hashInicial && !linkDireto) history.replaceState(null, '', location.pathname + location.search);
+    const irAoTopo = () => scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    irAoTopo();
+    let interagiu = false;
+    ['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach((ev) => addEventListener(ev, () => { interagiu = true; }, { once: true, passive: true }));
+    addEventListener('load', () => { if (!interagiu) irAoTopo(); }, { once: true });
+
     const PESSOAS = (window.PESSOAS || []).filter((p) => p.fotos && p.fotos.length);
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const celular = window.matchMedia('(max-width: 900px)');
